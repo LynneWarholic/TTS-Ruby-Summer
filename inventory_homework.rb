@@ -1,3 +1,5 @@
+#DON'T USE THIS
+
 my_hash = { pencils: "3", pens: "2", sticky_notes: "4"}
 
 puts "Hello! Here is a list of your current inventory."
