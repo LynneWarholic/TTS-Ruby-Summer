@@ -37,7 +37,7 @@ user_selection = gets.chomp.upcase
   	puts inventory.keys
   	puts ""
   	puts "Enter the name of the item you'd like to view." 
-  	item_view = gets.chomp
+  	item_view = gets.chomp.downcase
   	puts ""
   	puts "You have " + inventory[item_view] + " " + item_view + "."
   
@@ -47,7 +47,7 @@ user_selection = gets.chomp.upcase
   	puts inventory.keys
   	puts ""
   	puts "Enter the name of the item you'd like to delete." 
-  	item_delete = gets.chomp
+  	item_delete = gets.chomp.downcase
   	inventory.delete(item_delete)
   	puts "That item has been deleted. Here is your remaining list of items."
   	puts ""
@@ -61,9 +61,9 @@ user_selection = gets.chomp.upcase
   	puts inventory.keys
   	puts ""
   	puts "Enter the name of the item that requires a change in quantity."
-  	item_new_qty = gets.chomp
+  	item_new_qty = gets.chomp.downcase
   	puts "Enter the new quantity."
-  	qty_new_qty = gets.chomp
+  	qty_new_qty = gets.chomp.to_i
   	inventory[item_new_qty] = qty_new_qty
   	puts ""
   	puts "That item has been changed. Here is your new list of items."
@@ -78,9 +78,9 @@ user_selection = gets.chomp.upcase
   	puts inventory.keys
   	puts ""
   	puts "Enter the name of the item that requires a change."
-  	name_old = gets.chomp
+  	name_old = gets.chomp.downcase
   	puts "Enter the new name of the item."
-  	name_new = gets.chomp
+  	name_new = gets.chomp.downcase
   	inventory[name_new] = inventory.delete(name_old)
   	puts ""
   	puts "That item has been changed. Here is your new list of items."
@@ -95,7 +95,7 @@ user_selection = gets.chomp.upcase
   	puts inventory.keys
   	puts ""
   	puts "Enter the name of the item to add."
-  	item_add = gets.chomp
+  	item_add = gets.chomp.downcase
   	puts "Enter the quantity of the new item."
   	quantity_add = gets.chomp
   	inventory[item_add] = quantity_add
